@@ -1,0 +1,19 @@
+{
+  "name": "2020-christmas-card",
+  "version": "1.0.0",
+  "description": "Where are the Rauschdos?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awayken/2020-christmas-card.git"
+  },
+  "author": "Miles Rausch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awayken/2020-christmas-card/issues"
+  },
+  "homepage": "https://github.com/awayken/2020-christmas-card#readme"
+}
