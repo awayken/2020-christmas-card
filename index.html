@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Starter Snowpack App" />
+    <meta name="description" content="Walt Disney World shut down this year due to the COVID-19 pandemic, but that didn't stop three Rausch kids from trying to make their dreams come true." />
     <link rel="stylesheet" type="text/css" href="./assets/app.css" />
-    <title>Starter Snowpack App</title>
-  </head>
-  <body>
+    <title>I SPY Three Rausch Kids: 2020 Christmas Card</title>
+</head>
+<body>
     <ispy-canvas src="./assets/disney-world-map.jpg" alt="A map of Walt Disney World with three Rausch kids hidden on it.">
+        <ispy-target x="530px" y="950px" width="70px" height="190px" debug>
+            <div slot="found">
+                <h1>You Found Ian!</h1>
+                <p>Ian Lorem ipsum dolor sit amet consectetur, adipisicing elit. A at accusantium nisi autem mollitia! Eius, laudantium voluptatum vitae minus adipisci quibusdam in placeat, est eaque ullam blanditiis tempora? Minus, ipsam!</p>
+            </div>
+        </ispy-target>
 
+        <ispy-target x="1320px" y="380px" width="70px" height="140px" debug>
+            <div slot="found">
+                <h1>You Found Ainsley!</h1>
+                <p>Ainsley Lorem ipsum dolor sit amet consectetur, adipisicing elit. A at accusantium nisi autem mollitia! Eius, laudantium voluptatum vitae minus adipisci quibusdam in placeat, est eaque ullam blanditiis tempora? Minus, ipsam!</p>
+            </div>
+        </ispy-target>
+
+        <ispy-target x="1160px" y="1120px" width="90px" height="100px" debug>
+            <div slot="found">
+                <h1>You Found Remy!</h1>
+                <p>Remy Lorem ipsum dolor sit amet consectetur, adipisicing elit. A at accusantium nisi autem mollitia! Eius, laudantium voluptatum vitae minus adipisci quibusdam in placeat, est eaque ullam blanditiis tempora? Minus, ipsam!</p>
+            </div>
+        </ispy-target>
     </ispy-canvas>
 
     <script type="module" src="./app.js"></script>
-  </body>
+</body>
 </html>

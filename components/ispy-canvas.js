@@ -29,10 +29,8 @@ class ISpyCanvas extends LitElement {
     render() {
         return html`
             <div>
-                <img
-                    alt="${this.alt}"
-                    src="${this.src}"
-                />
+                <img alt="${this.alt}" src="${this.src}" />
+                <slot></slot>
             </div>
         `;
     }
