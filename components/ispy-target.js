@@ -1,5 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 
+import './ispy-modal.js';
+
 class ISpyTarget extends LitElement {
     static get properties() {
         return {
@@ -26,28 +28,11 @@ class ISpyTarget extends LitElement {
         `;
     }
 
-    connectedCallback() {
-        super.connectedCallback();
-
-        this.found = false;
-    }
-
-    targetClick(e) {
-        console.log(e);
-
+    toggleFound(e) {
         this.found = !this.found;
     }
 
     render() {
-        let foundHTML = '';
-
-        if (this.found) {
-            foundHTML = html`
-                <p>You found me!</p>
-                <slot name="found"></slot>
-            `;
-        }
-
         let buttonStyle = `
             height: ${this.height};
             left: ${this.x};
@@ -59,11 +44,12 @@ class ISpyTarget extends LitElement {
             <button
                 .style="${buttonStyle}"
                 class="${this.debug ? 'debug' : ''}"
-                @click="${this.targetClick}"
-            >
-                ispy-target
-            </button>
-            ${foundHTML}
+                @click="${this.toggleFound}"
+            ></button>
+
+            <ispy-modal ?show="${this.found}" @close="${this.toggleFound}">
+                <slot name="found"></slot>
+            </ispy-modal>
         `;
     }
 }
