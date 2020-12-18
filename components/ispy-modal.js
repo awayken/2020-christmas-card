@@ -36,6 +36,7 @@ class ISpyModal extends LitElement {
                 color: var(--content-color);
                 padding: var(--padding, 1em);
                 position: relative;
+                max-width: 38em;
             }
 
             button {
