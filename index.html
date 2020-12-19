@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Walt Disney World shut down this year due to the COVID-19 pandemic, but that didn't stop three Rausch kids from trying to make their dreams come true." />
+    <title>I SPY Rausch Kids on Vacation: 2020 Christmas Card</title>
+
+    <link rel="preload" href="./assets/app.css" as="style" />
+    <link rel="preload" href="./app.js" as="script" />
+    <link rel="preload" href="./components/ispy-canvas.js" as="script" />
+    <link rel="preload" href="./components/ispy-target.js" as="script" />
+
     <link rel="stylesheet" type="text/css" href="./assets/app.css" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
-    <title>I SPY Rausch Kids on Vacation: 2020 Christmas Card</title>
+
+    <meta name="theme-color" content="#749d37">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Walt Disney World shut down this year due to the COVID-19 pandemic, but that didn't stop three Rausch kids from trying to make their dreams come true." />
 
     <meta property="og:title" content="I SPY Rausch Kids on Vacation: 2020 Christmas Card" />
     <meta property="og:description" content="Walt Disney World shut down this year due to the COVID-19 pandemic, but that didn't stop three Rausch kids from trying to make their dreams come true." />
@@ -15,8 +23,8 @@
     <meta property="og:image:height" content="640" />
 </head>
 <body>
-    <ispy-canvas src="./assets/disney-world-map.jpg?v=1" alt="A map of Walt Disney World with three Rausch kids hidden on it.">
-        <ispy-target x="876px" y="950px" width="70px" height="190px">
+    <ispy-canvas src="./assets/disney-world-map.jpg?v=2" alt="A map of Walt Disney World with three Rausch kids hidden on it.">
+        <ispy-target x="876px" y="950px" width="70px" height="190px" name="Ian">
             <div slot="found">
                 <h1>You Found Ian!</h1>
                 <p>
@@ -28,7 +36,7 @@
             </div>
         </ispy-target>
 
-        <ispy-target x="1663px" y="380px" width="70px" height="140px">
+        <ispy-target x="1663px" y="380px" width="70px" height="140px" name="Ainsley">
             <div slot="found">
                 <h1>You Found Ainsley!</h1>
                 <p>
@@ -40,7 +48,7 @@
             </div>
         </ispy-target>
 
-        <ispy-target x="1500px" y="1120px" width="90px" height="100px">
+        <ispy-target x="1500px" y="1120px" width="90px" height="100px" name="Remy">
             <div slot="found">
                 <h1>You Found Remy!</h1>
                 <p>

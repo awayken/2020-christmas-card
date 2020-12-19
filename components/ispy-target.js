@@ -8,6 +8,7 @@ class ISpyTarget extends LitElement {
             debug: { type: Boolean },
             found: { type: Boolean },
             height: { type: String },
+            name: { type: String },
             width: { type: String },
             x: { type: String },
             y: { type: String }
@@ -45,6 +46,7 @@ class ISpyTarget extends LitElement {
                 .style="${buttonStyle}"
                 class="${this.debug ? 'debug' : ''}"
                 @click="${this.toggleFound}"
+                aria-label="${this.name}"
             ></button>
 
             <ispy-modal ?show="${this.found}" @close="${this.toggleFound}">
