@@ -22,21 +22,35 @@ class ISpyModal extends LitElement {
                 flex-direction: column;
                 justify-content: center;
                 left: 0;
+                opacity: 0;
                 padding: 2em;
                 position: fixed;
                 right: 0;
+                transition: opacity 300ms ease-in-out;
                 top: 0;
+                z-index: -1;
+            }
+
+            .shade--shown {
+                opacity: 1;
                 z-index: 10;
             }
 
             .wrap {
                 background: var(--content-background);
                 border: 2px solid currentColor;
-                border-radius: .35em;
+                border-radius: 0.35em;
                 color: var(--content-color);
+                max-width: 38em;
                 padding: var(--padding, 1em);
                 position: relative;
-                max-width: 38em;
+                transform: scale(0.5, 0.5);
+                transition: transform cubic-bezier(0.68, -0.55, 0.27, 1.55)
+                    400ms;
+            }
+
+            .shade--shown .wrap {
+                transform: scale(1, 1);
             }
 
             button {
@@ -53,8 +67,8 @@ class ISpyModal extends LitElement {
             .close {
                 cursor: pointer;
                 position: absolute;
-                right: -.7em;
-                top: -.7em;
+                right: -0.7em;
+                top: -0.7em;
             }
         `;
     }
@@ -66,12 +80,8 @@ class ISpyModal extends LitElement {
     }
 
     render() {
-        if (!this.show) {
-            return '';
-        }
-
         return html`
-            <div class="shade">
+            <div class="shade ${this.show ? 'shade--shown' : ''}">
                 <div class="wrap">
                     <slot></slot>
 
